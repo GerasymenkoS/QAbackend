@@ -1,0 +1,45 @@
+{
+  "name": "transfer-api",
+  "version": "4.0.0",
+  "adonis-version": "4.0.0",
+  "description": "transfer-api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ace test"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis-app"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@adonisjs/ace": "^4.0.7",
+    "@adonisjs/auth": "^2.0.10",
+    "@adonisjs/bodyparser": "^2.0.0",
+    "@adonisjs/cors": "^1.0.3",
+    "@adonisjs/drive": "^1.0.1",
+    "@adonisjs/fold": "^4.0.5",
+    "@adonisjs/framework": "^4.0.28",
+    "@adonisjs/ignitor": "^1.0.14",
+    "@adonisjs/lucid": "^4.0.24",
+    "@adonisjs/session": "^1.0.19",
+    "@adonisjs/shield": "^1.0.4",
+    "@adonisjs/validator": "^4.0.8",
+    "@adonisjs/vow": "^1.0.15",
+    "adonis": "^0.9.0",
+    "global": "^4.3.2",
+    "leaflet-routeboxer": "^1.0.3",
+    "sqlite3": "^3.1.13",
+    "url-parse": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0"
+  },
+  "autoload": {
+    "App": "./app"
+  }
+}

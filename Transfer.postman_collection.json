@@ -1,0 +1,348 @@
+{
+	"info": {
+		"name": "Transfer",
+		"_postman_id": "e8ad38f6-bd99-6a43-2555-519c00d35cce",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "pavliha@mailinator.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty123",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3333/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"login"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "Pavel",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Kostyuk",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pavliha@mailinator.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0683188524",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty123",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3333/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"register"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUxNTE1MjQzOH0.m_9ZW1yeaf46WinN4_j__6I7Pz12E3PFlRS7w2BJXCM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3333/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"user"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "cargo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImRhdGEiOnsiaWQiOjEsImZpcnN0X25hbWUiOiJQYXZlbCIsImxhc3RfbmFtZSI6Iktvc3R5dWsiLCJlbWFpbCI6InBhdmxpaGFAbWFpbGluYXRvci5jb20iLCJwaG9uZSI6IjA2ODMxODg1MjQiLCJjcmVhdGVkX2F0IjoiMjAxOC0wMi0wNSAxNjo0MjoxNiIsInVwZGF0ZWRfYXQiOiIyMDE4LTAyLTA1IDE2OjQyOjE2In0sImlhdCI6MTUxNzg0MjQ4NX0.jMlKuln6JNTNjPwn2czvPwT-XsnYcdyjoiiTKpB3TaU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3333/cargo?limit=3&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"cargo"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "3",
+							"equals": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create cargo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImRhdGEiOnsiaWQiOjEsImZpcnN0X25hbWUiOiJQYXZlbCIsImxhc3RfbmFtZSI6Iktvc3R5dWsiLCJlbWFpbCI6InBhdmxpaGFAbWFpbGluYXRvci5jb20iLCJwaG9uZSI6IjA2ODMxODg1MjQiLCJjcmVhdGVkX2F0IjoiMjAxOC0wMi0wNSAxNjoyOToxMCIsInVwZGF0ZWRfYXQiOiIyMDE4LTAyLTA1IDE2OjI5OjEwIn0sImlhdCI6MTUxNzg0MDk1N30.2a0ucrTH8ChvrHRaBtYZgZoQbH6XYkcxwnholgk0990",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Картоха",
+							"description": "имя груза",
+							"type": "text"
+						},
+						{
+							"key": "from",
+							"value": "Kosmichna St, 112Б\nZaporizhzhia\nZaporiz'ka oblast",
+							"description": "адрес",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "Ленина, 141, Vesele, Zaporiz'ka oblast",
+							"description": "адрес",
+							"type": "text"
+						},
+						{
+							"key": "date_from",
+							"value": "2018-2-3",
+							"description": "дата начала ожидания",
+							"type": "text"
+						},
+						{
+							"key": "date_to",
+							"value": "2018-2-14",
+							"description": "дата окончания ожидания",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"description": "несколько картинок",
+							"type": "file",
+							"src": "download.png"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"description": "грн",
+							"type": "text"
+						},
+						{
+							"key": "volume",
+							"value": "10",
+							"description": "м3",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "10",
+							"description": "кг",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "descriptiondescription description description description description description description description description description",
+							"description": "описание",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3333/cargo",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"cargo"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsImlhdCI6MTUxNTE1MjQzOH0.m_9ZW1yeaf46WinN4_j__6I7Pz12E3PFlRS7w2BJXCM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "df249413-d07f-4557-b608-c943d39dbd0e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4904791d-57dc-4847-b0f8-39b2a9c270bd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "8e6e22d2-dd8d-4070-a0ac-c2d4fd453ca1",
+			"key": "local",
+			"value": "http://localhost:3333/",
+			"type": "text"
+		},
+		{
+			"id": "e7e882dc-3f9e-48a8-a417-4d55e2d723ef",
+			"key": "prod",
+			"value": "https://transfer-api.herokuapp.com/",
+			"type": "text"
+		}
+	]
+}
